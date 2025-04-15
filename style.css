@@ -380,6 +380,7 @@ main.main{
   display: flex;
   flex-direction: row; /* Arrange items in a row (default) */
   justify-content: space-between; /* Adjust spacing as needed */
+  flex-wrap: wrap;
 }
 
 .feature__container {
@@ -389,7 +390,7 @@ main.main{
   margin-right: 10px;
   max-height: 400px;
   margin-bottom: 20px;
-  padding-bottom: 55px;
+  padding-bottom: 75px;
   border-radius: 5px;
 
 }
