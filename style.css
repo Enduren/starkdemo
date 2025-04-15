@@ -28,12 +28,14 @@
 .header{
   background: var(--navbar-color);
   padding: 1rem;
+  box-sizing: border-box;
 }
 .header__inner {
   display: flex; /* Enable Flexbox for the inner header container */
   align-items: center; /* Vertically align the icon and the navigation */
   font-size: smaller;
   margin-left: 20rem;
+  padding: 5px;
 }
 
 .header__menu-nav {
@@ -46,11 +48,15 @@
 
 .nav__menu-ul {
   list-style: none;
-  padding: 0;
+  padding: 8px;
   margin: 0;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 0.5rem;
   gap: 20px;
   font-weight: bold;
+  box-sizing: border-box;
 }
 
 ul.nav__menu-ul li a {
@@ -64,6 +70,7 @@ ul.nav__menu-ul li a:hover{
   border: 2px solid var(--secondary-color) !important;
   border-radius: 8px;
 }
+
 
 .nav__menu-ul li:last-child,
 .nav__menu-ul li:nth-last-child(2) {
@@ -86,8 +93,8 @@ li.logIn {
 /* Style the button link ("30-DAY FREE TEAM TRIAL") */
 .link__btn { 
   background: var(--secondary-color);
-  padding: 3px 10px; 
-  border-radius: 5px; 
+  padding: 5px 10px; 
+  border-radius: 8px; 
 }
 a.link__btn{
   color: var(--primary-color)!important;
