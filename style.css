@@ -22,20 +22,24 @@
 
   body {
     background: var(--primary-color);
+    max-width: 1800px;
   }
 
 /* header nav  */
-.header{
-  background: var(--navbar-color);
-  padding: 1rem;
-  box-sizing: border-box;
+.header {
+  width: 100%; /* Make the header take 100% width */
 }
-.header__inner {
+header.header{
+  background: var(--navbar-color);
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+div.header__inner {
   display: flex; /* Enable Flexbox for the inner header container */
   align-items: center; /* Vertically align the icon and the navigation */
   font-size: smaller;
   margin-left: 20rem;
-  padding: 5px;
 }
 
 .header__menu-nav {
@@ -46,13 +50,15 @@
   flex-grow: 1; /* Allow the navbar to take up available space */
 }
 
-.nav__menu-ul {
+ul.nav__menu-ul{
   list-style: none;
   padding: 8px;
   margin: 0;
   display: flex;
   flex-direction: row;
+  text-align: center;
   justify-content: space-between;
+  align-items: center;
   column-gap: 0.5rem;
   gap: 20px;
   font-weight: bold;
@@ -68,7 +74,7 @@ ul.nav__menu-ul li a {
 }
 ul.nav__menu-ul li a:hover{
   border: 2px solid var(--secondary-color) !important;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 
@@ -92,14 +98,19 @@ li.logIn {
 
 /* Style the button link ("30-DAY FREE TEAM TRIAL") */
 
-a.link__btn{
+.link__btn{
   background: var(--secondary-color);
   padding: 5px 10px; 
   border-radius: 8px; 
+  font-weight: bold;
   color: var(--primary-color)!important;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 .link__btn:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 /* Central */
@@ -112,7 +123,7 @@ a.link__btn{
   border: 0px solid rgb(229, 231, 235);
   box-sizing: border-box;
   margin-left: 6rem;
-  margin-top: 5;
+  margin-top: 5px;
 }
 
 /* ASIDE */
@@ -336,7 +347,7 @@ main.main{
 
 /* TODO SECTION2 Featured Collections*/
 .section__feature-wrapper{
- 
+  
   margin-left: 4rem;
   margin-top: 4rem;
   width: 70%;
@@ -392,13 +403,19 @@ main.main{
 .feature__container {
   /* Optionally set a width for each container if you want them to take up equal space */
   flex: 1;
-  border: 2px solid rgb(227, 223, 223);
+  border: 2px solid rgb(250, 249, 249);
   margin-right: 10px;
   max-height: 400px;
   margin-bottom: 20px;
   padding-bottom: 75px;
-  border-radius: 5px;
+  border-radius: 10px;
 
+}
+
+.feature__container:hover{
+  cursor: pointer;
+  border: 2px solid rgb(213, 211, 211);
+  
 }
 
 /* Remove margin-right from the last item in the row */
@@ -410,7 +427,7 @@ main.main{
 .feature__container img.feature__img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Or contain, fill, scale-down, none */
+  object-fit: fill; /* Or contain, fill, scale-down, none */
 }
 .feature__h4{
   transform: translateZ(20px);
@@ -422,8 +439,10 @@ main.main{
   line-height: 1.1;
   border: 0px solid rgb(229, 231, 235);
   box-sizing: border-box;
+  text-align: start;
+  margin-left: 5px;
+  
 }
-
 /* FOOTER */
 .footer{
   background: var(--footer-color);
@@ -504,4 +523,255 @@ p.footer__link:hover{
 }
 
 
+
+
+/* Mobile Styles (min-width: 375px) and (max-width: 768px) */
+@media (min-width: 375px) and (max-width: 768px) {
+  header .header__inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0; /* Explicitly set padding to 0 for testing */
+    padding-right: 0;
+    margin-left: 0; /* Explicitly set margin to 0 for testing */
+    margin-right: 0;
+  }
+
+  .header__menu-nav {
+    display: flex; /* Hide the navigation menu */
+  }
+.nav__menu-ul li{
+  display: none;
+}
+  .fa-brands.fa-nfc-symbol {
+    padding-top: 5px;
+    padding-right: 40px;
+    margin-top: 10px;
+  }
+
+  .link__btn {
+    /* It will be on the far right due to space-between */
+    margin-top: 10px;
+  }
+
+  .central__div,
+  aside.aside,
+  main.main,
+  .section__libary-wrapper,
+  .section__feature-wrapper,
+  .res__containers,
+  .feature__containers,
+  .input__wrapper {
+    width: 100%;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+  .libary__search-label{
+    display: none;
+  }
+  .input{
+    margin-top: 10px;
+  }
+  aside.aside {
+    order: -1;
+    margin-bottom: 1rem;
+    padding-top: 0;
+    padding-left: 1rem;
+  }
+
+  div.side__nav {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+
+  div.side__nav a {
+    padding: 0.5rem 0;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  div.input__wrapper {
+    order: -1;
+    width: 100%;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  div.input__wrapper input {
+    padding-left: 1rem;
+  }
+  .headline-h2{
+    font-size: xx-large;
+  }
+  .section__feature-wrapper{
+    margin-top: 10px;
+  }
+  .feature__h2{
+    font-size: xx-large;
+  }
+  .res__containers,
+  .feature__containers {
+    flex-direction: column;
+
+  }
+
+  .feature__container {
+    margin-right: 0 !important;
+    height: auto;
+  }
+
+  .feature__container img.feature__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  div.contribute__div {
+    display: none;
+  }
+
+  .footer {
+    
+    padding: 10px;
+  }
+
+  .footer__contents {
+    
+    margin-left: 10px;
+  }
+
+  .footer__flex-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    padding-left: 0; /* Resetting padding for testing */
+    margin-left: 0; /* Resetting margin for testing */
+  }
+
+  .footer__column {
+    margin-top: 40px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    padding: 5px;
+    width: 150px;
+   
+  
+  }
+  .footer__title{
+    font-size: medium;
+  }
+}
+
+
+/* Tablet Styles (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header__menu-nav ul.nav__menu-ul {
+    display: flex;
+  }
+
+  .central__div,
+  main.main,
+  .section__libary-wrapper,
+  .section__feature-wrapper,
+  .res__containers,
+  .feature__containers {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+
+  .central__div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside.aside {
+    display: flex; /* Make aside a flex container */
+    flex-direction: column; /* Stack its children vertically */
+    order: 0; /* Reset order */
+    min-width: auto;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 1.25rem;
+  }
+
+  div.side__nav {
+    order: -2; /* Move side__nav (library links) to the top */
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0 16px 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  div.side__nav a {
+    padding: 16px 0 16px 0;
+    text-align: left;
+    flex-grow: initial;
+  }
+
+  div.input__wrapper {
+    order: -1; /* Move input__wrapper below side__nav */
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  div.contribute__div {
+    display: block;
+  }
+
+  main.main {
+    /* Adjust main content layout as needed */
+  }
+
+  .res__containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .res__container {
+    width: calc(50% - 16px);
+    height: auto;
+    margin-right: 16px;
+    margin-bottom: 2rem;
+  }
+
+  .res__container:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .feature__containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .feature__container {
+    width: calc(50% - 16px);
+    margin-right: 16px;
+    margin-bottom: 2rem;
+  }
+
+  .feature__container:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .feature__container img.feature__img {
+    height: auto;
+    object-fit: cover;
+  }
+}
 
