@@ -633,8 +633,10 @@ p.footer__link:hover{
   .headline-h2{
     font-size: xx-large;
   }
-  .section__feature-wrapper{
+  section.section__feature-wrapper{
     margin-top: 10px;
+    gap: 10px;
+    margin-bottom: 20px;
   }
   .feature__div{
     margin: 0;
@@ -646,6 +648,7 @@ p.footer__link:hover{
   .res__containers{
     margin: 0;
     padding: 0;
+   
     width: 20rem;
   }
   .res__containers,
@@ -662,6 +665,7 @@ p.footer__link:hover{
   .feature__container {
     margin-right: 0 !important;
     height: auto;
+    gap: 20px;
     border: 2px solid rgb(195, 194, 194);
     
   }
@@ -669,7 +673,7 @@ p.footer__link:hover{
   .feature__container img.feature__img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   div.contribute__div {
