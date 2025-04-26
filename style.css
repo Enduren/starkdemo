@@ -657,7 +657,10 @@ p.footer__link:hover{
     flex-direction: column;
     
   }
-
+  div.feature__containers{
+    justify-content: space-evenly;
+    gap: 20px;
+  }
   .res__container{
     border: 2px solid rgb(195, 194, 194);
     width: 100%;
