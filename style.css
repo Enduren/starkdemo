@@ -637,6 +637,7 @@ p.footer__link:hover{
     margin-top: 10px;
     gap: 10px;
     margin-bottom: 20px;
+    justify-content: space-evenly;
   }
   .feature__div{
     margin: 0;
