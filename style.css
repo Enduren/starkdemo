@@ -686,6 +686,7 @@ p.footer__link:hover{
     padding: 10px;
     margin: 0;       /* Reset default margins */
     font-size: xx-large;
+    border-radius:8px ;
   }
 
  
