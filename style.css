@@ -638,47 +638,60 @@ p.footer__link:hover{
     gap: 10px;
     margin-bottom: 20px;
     justify-content: space-evenly;
+    height: auto;
   }
-  .feature__div{
-    margin: 0;
-    padding: 0;
-  }
-  .feature__h2{
-    font-size: xx-large;
-  }
-  .res__containers{
-    margin: 0;
-    padding: 0;
-   
-    width: 20rem;
-  }
+
+
   .res__containers,
   .feature__containers {
     flex-direction: column;
     
   }
-  div.feature__containers{
-    /* justify-content: space-evenly; */
-    gap: 20px;
-  }
+ 
   .res__container{
     border: 2px solid rgb(195, 194, 194);
     width: 100%;
+    
   }
 
   .feature__container {
     margin-right: 0 !important;
-    height: auto;
+    position: relative;
+    height: 200px;
     gap: 20px;
     border: 2px solid rgb(195, 194, 194);
     
   }
 
+  .feature__h2{
+    font-size: xx-large;
+  }
+
+ 
   .feature__container img.feature__img {
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: contain;
+    display: block; /* Prevent extra space below inline images */
+   
+    
   }
+
+  .feature__h4 {
+    position: absolute; /* Take it out of the normal flow */
+    bottom: 0;        /* Align the bottom of the heading with the bottom of the container */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a background for better readability */
+    color: white;
+    padding: 10px;
+    margin: 0;       /* Reset default margins */
+    font-size: xx-large;
+  }
+
+ 
+  
+  
+  
 
   div.contribute__div {
     display: none;
