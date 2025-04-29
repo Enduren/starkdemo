@@ -734,7 +734,7 @@ p.footer__link:hover{
 
 
 /* Tablet Styles (min-width: 769px) and (max-width: 1024px) */
-@media (min-width: 900px) and (max-width: 1024px) {
+@media (900px >= width <=1024px)  {
   .header .header__inner {
     display: flex;
     justify-content: flex-start;
