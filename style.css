@@ -22,12 +22,13 @@
 
   body {
     background: var(--primary-color);
-    max-width: 1800px;
+    
   }
 
 /* header nav  */
 .header {
   width: 100%; /* Make the header take 100% width */
+  
 }
 header.header{
   background: var(--navbar-color);
