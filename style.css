@@ -682,8 +682,8 @@ p.footer__link:hover{
     position: absolute; /* Take it out of the normal flow */
     bottom: 0;        /* Align the bottom of the heading with the bottom of the container */
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a background for better readability */
-    color: white;
+    /* background-color: rgba(0, 0, 0, 0.7); Optional: Add a background for better readability */
+    color: rgb(10, 10, 10);
     padding: 10px;
     margin: 0;       /* Reset default margins */
     font-size: x-large;
